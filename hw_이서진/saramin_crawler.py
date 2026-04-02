@@ -28,7 +28,7 @@ for page_num in range(1,4):
     items = [item for item in soup.select(".list_recruiting .list_item") if item.get("id")]
  
     for item in items:
-        url = item.select_one(".col.notification_info .str_tit")["href"] if item.select_one(".col.notification_info .str_tit") else ""  # TODO: 공고 URL 셀렉터
+        url = item.select_one(".col.notification_info .str_tit")["href"] if item.select_one(".col.notification_info .str_tit") else ""
         if url:
             url_list.append("https://www.saramin.co.kr" + url)
 
